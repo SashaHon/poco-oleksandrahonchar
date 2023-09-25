@@ -12,9 +12,9 @@
             <nav>
                 <ul>
                     <li><a href="#here">Home</a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#explore_img">Image</a></li>
+                    <li><a href="#callback">Request callback</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -31,7 +31,7 @@
                 <li>explore the horizonsof technology</li>
                 <li>elegance of simplicity & ingenuity of complexity</li>
             </ol>
-            <img src="https://images.unsplash.com/photo-1534685785745-60a2cea0ec34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZXhwbG9yZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80" alt="exploration_image">
+            <img id="explore_img" src="https://images.unsplash.com/photo-1534685785745-60a2cea0ec34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZXhwbG9yZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80" alt="exploration_image">
             <p>In a world teeming with possibilities, <strong>imagination</strong> and <strong>innovation</strong> reign supreme. Imagine a realm where ideas are the
             seeds of progress, and creativity is the lifeblood of advancement. Here, the power of <strong>discovery</strong> fuels the ever-evolving
             landscape of knowledge and <strong>inspiration</strong> fuels our collective journey forward.
@@ -46,7 +46,9 @@
             dedication, an <em>exploration</em> fueled by the desire to unravel the unknown and share our findings with a world hungry for
             <em>innovation</em> and <em>insight</em>. Join us in this voyage, where the extraordinary awaits and the extraordinary is within reach.
             </p>
+        </article>
 
+        <article id="callback">
             <h2>Would like us to contact you?</h2>
             <form action="#" method="post">
                 <fieldset id="email_form">
@@ -58,12 +60,42 @@
                     <input type="number" id="user_age" name="user_age" placeholder="18">
                     <br>
                     <label for="user_tel">Your telephone number:</label>
-                    <input type="tel" id="user_tel" name="user_tel" placeholder="+41 00 000 0000">
+                    <input type="tel" id="user_tel" name="user_tel" placeholder="+41 00 000 0000" required>
                     <br>
                     <label for="user_email">Your email:</label>
-                    <input type="email" id="user_email" name="user_email" placeholder="your@email.com" required>
+                    <input type="email" id="user_email" name="user_email" placeholder="your@email.com">
                 </fieldset>
             </form>
+        </article>
+
+        <article id="contact">
+            <h2>Or would you like to contact us instead?</h2>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Last Name</th>
+                    <th>Position</th>
+                    <th>Email</th>
+                </tr>
+                <tr>
+                    <td>Emma</td>
+                    <td>Watson</td>
+                    <td>Actress</td>
+                    <td>emmawatson@yahoo.com</td>
+                </tr>
+                <tr>
+                    <td>Tim</td>
+                    <td>Cook</td>
+                    <td>CEO of Apple</td>
+                    <td>timcook@apple.com</td>
+                </tr>
+                <tr>
+                    <td>Jean-Marie</td>
+                    <td>Frechet</td>
+                    <td>scientist</td>
+                    <td>jeanmariefrechet@berkeleyscollege.org</td>
+                </tr>
+            </table>
         </article>
     </main>
 </body>
