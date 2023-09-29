@@ -1,0 +1,13 @@
+main {
+    height: 300px;
+    background-color: green;
+
+    display: grid;
+    grid-template-columns: 10;
+    grid-template-rows: 10;
+}
+
+footer {
+    height: 200px;
+    background-color: black;
+}
