@@ -17,29 +17,98 @@
         <div>----------------</div>
 
         <section>
-            <h2>Persönliche Daten</h2>
-            <label for="user_titel">Titel</label>
-            <input type="text" id="user_titel" name="user_titel">
-            <br>
-            <label for="user_vorname">Vorname</label>
-            <input type="text" id="user_vorname" name="user_vorname">
-            <br>
-            <label for="user_nachname">Nachname</label>
-            <input type="text" id="user_nachname" name="user_nachname">
-            <br>
-            <label for="user_geschlecht">Geschlecht</label>
-            <input type="reset" id="user_geschlecht" name="user_geschlecht">
-            <label for="user_sprache">Sprache</label>
-            <input type="reset" id="user_sprache" name="user_sprache">
+            <form action="do_something_1">
+                <fieldset id="user_profil">
+                    <label for="">Persönliche Daten</label>
+                    <label for="user_titel">Titel</label>
+                    <input type="text" id="user_titel" name="user_titel">
+                    <br>
+                    <label for="user_vorname">Vorname</label>
+                    <input type="text" id="user_vorname" name="user_vorname">
+                    <br>
+                    <label for="user_nachname">Nachname</label>
+                    <input type="text" id="user_nachname" name="user_nachname">
+                    <br>
+                    <label for="user_geschlecht">Geschlecht</label>
+                    <input type="checkbox" id="user_geschlecht" name="user_geschlecht">
+                    <label for="user_geschlecht">W</label>
+                    <input type="checkbox" id="user_geschlecht" name="user_geschlecht" checked>
+                    <label for="user_geschlecht_m">M</label>
+                    <br>
+                    <label for="user_sprache">Sprache</label>
+                    <input type="checkbox" id="user_sprache" name="user_sprache" checked>
+                    <label for="user_sprache">DE</label>
+                    <input type="checkbox" id="user_sprache" name="user_sprache">
+                    <label for="user_sprache">FR</label>
+                    <input type="checkbox" id="user_sprache" name="user_sprache">
+                    <label for="user_sprache">IT</label>
+                </fieldset>
+            </form>
         </section>
 
         <div>----------------</div>
 
         <section>
-            <h2>Kontaktdaten</h2>
-            <label for="user_tel"></label>
-            <input type="tel" name="user_tel" id="user_tel" required>
+            <form action="do_something_2" method="post">
+                <fieldset id="user_kontaktdaten">
+                    <legend>Kontaktdaten</legend>
+                    <label for="user_tel">Telefon</label>
+                    <input type="tel" name="user_tel" id="user_tel" required>
+                    <br>
+                    <label for="user_mobile">Mobile</label>
+                    <input type="tel" name="user_mobile" id="user_mobile" placeholder="optional">
+                    <br>
+                    <label for="user_hauptnummer">Hauptnummer</label>
+                    <input type="tel" name="user_hauptnummer" id="user_hauptnummer" placeholder="optional">
+                    <br>
+                    <label for="user_fax">Fax</label>
+                    <input type="tel" name="user_fax" id="user_fax" placeholder="optional">
+                    <br>
+                    <label for="user_email_1">Email 1</label>
+                    <input type="email" name="user_email_1" id="user_email_1" required>
+                    <br>
+                    <label for="user_email_2">Email 2</label>
+                    <input type="email" name="user_email_2" id="user_email_2" placeholder="optional">
+                </fieldset>
+            </form>
         </section>
+
+        <div>----------------</div>
+
+        <form action="do_something_3" method="post">
+            <fieldset id="user_adressdaten">
+                <legend>Adressdaten</legend>
+                <label for="user_firma">Firma</label>
+                <input type="text" id="user_firma" name="user_firma" required>
+                <br>
+                <label for="user_zusatz_firma">Zusatz Firma</label>
+                <input type="text" id="user_zusatz_firma" name="user_zusatz_firma" placeholder="optional">
+                <br>
+                <label for="user_homepage">Homepage</label>
+                <input type="text" id="user_homepage" name="user_homepage" placeholder="optional">
+                <br>
+                <label for="user_adresse_hausnr">Adresse / Haus Nr</label>
+                <input type="text" id="user_adresse_hausnr" name="user_adresse_hausnr" placeholder="Musterstrasse">
+                <input type="number" id="user_adresse_hausnr" name="user_adresse_hausnr" placeholder="33">
+                <br>
+                <label for="user_zusatz_adresse">Zusatz Adresse</label>
+                <input type="text" id="user_zusatz_adresse" name="user_zusatz_adresse" placeholder="optional">
+                <br>
+                <label for="user_postfah">Postfah</label>
+                <input type="text" id="user_postfah" name="user_postfah" placeholder="optional">
+                <br>
+                <label for="user_plz_ort">PLZ / Ort</label>
+                <input type="number" id="user_plz_ort" name="user_plz_ort" placeholder="880">
+                <input type="text" id="user_plz_ort" name="user_plz_ort" placeholder="Musterstadt">
+                <br>
+                <label for="user_kanton_land">Kanton / Land</label>
+                <input type="text" id="user_kanton_land" name="user_kanton_land" placeholder="ZH">
+                <input type="text" id="user_kanton_land" name="user_kanton_land" placeholder="Schweiz">
+                <br>
+            </fieldset>
+        </form>
+
+        <button>Speichen</button>
     </main>
 
 </body>
