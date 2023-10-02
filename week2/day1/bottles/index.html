@@ -10,43 +10,43 @@
 </head>
 
 <body>
-    <main>
-        <nav>
-            <input type="checkbox" id="toggleMobileNav" class="hidden">
-            <label for="toggleMobileNav" class="hidden">
-                <span>toggle navigation visibility on mobile</span>
-            </label>
-
-            <a href="#">
-                <img src="#" alt="Go to homepage">
+    <main class="container">
+        <input type="checkbox" id="toggleMobileNav" class="hidden">
+        <label for="toggleMobileNav" class="hidden">
+            <span>toggle navigation visibility on mobile</span>
+        </label>
+        <nav class="d-flex space-between align-center">
+            <a href="#lang">
+                <img src="img/logo-bottles-boutique.png" alt="Bottles Botique logo" title="Go back to Homepage">
             </a>
 
-            <ul>
-                <li>shop bottles</li>
-                <li>rewiews & stories</li>
-                <li>about</li>
+            <ul class="d-flex fb-48 space-between ls-none rem-12">
+                <li><a href="#">shop bottles</a></li>
+                <li><a href="#">rewiews & stories</a></li>
+                <li><a href="#">about</a></li>
             </ul>
 
-            <div>
-                <div>
-                    <img src="#" alt="account">
-                    <img src="#" alt="shop">
-                </div>
+            <ul class="d-flex fb-16 ls-none space-around">
+                <li><img src="img/icons/user.png" alt="account" title="Your Account" class="color-main h-24 fb-2"></li>
+                <li><img src="img/icons/shopping-cart.png" alt="shop" title="Your Cart" class="color-main h-24 "></li>
+            </ul>
 
-                <div>
-                    <button>en</button>
-                </div>
-            </div>
+            <select name="lang" id="lang" class="rem-12 t-uppercase border-none">
+                <option value="en">en</option>
+                <option value="de">de</option>
+                <option value="fr">fr</option>
+            </select>
         </nav>
 
 
-        <header>
+        <header class="p-80 h-50vh d-flex fd-column space-between align-center t-center">
             <h1>Reusable bottles in beautiful designs</h1>
-            <p>For water and more. Waterproof. Leak-proof. Keeps you drink ice-cold or super warm. For 24 hours.</p>
-            <button>Shop now</button>
+            <p class="rem-14">For water and more. Waterproof. Leak-proof. Keeps you drink <br>
+                ice-cold or super warm. For 24 hours.</p>
+            <button class="color-main rem-12">Shop now</button>
         </header>
 
-        <section>
+        <section class="p-80 h-50vh t-center">
             <h2>Our bottles - beautiful & practical</h2>
             <div>
                 <div>
@@ -126,34 +126,33 @@
                 </div>
             </div>
         </section>
-
-        <footer>
-            <div>
-                <div>
-                    <h4>Support</h4>
-                    <ul>
-                        <li><a href="#">contact us</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Return & Refund</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="#">Terms & conditions</a></li>
-                        <li><a href="#">Privacy</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div>
-                <h4>About us</h4>
-                <p>Bottles Boutique is a small online shop based in Zürich, Switzerland with the goal to sell beautiful,
-                    re-usable bottles which are later recycable for a fair price.</p>
-            </div>
-            <p>&copy;2023, Bottles Boutique, Sample Street 5, 56578, Zürich </p>
-        </footer>
     </main>
+    <footer class="container">
+        <div>
+            <div>
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">contact us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Return & Refund</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Terms & conditions</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <h4>About us</h4>
+            <p>Bottles Boutique is a small online shop based in Zürich, Switzerland with the goal to sell beautiful,
+                re-usable bottles which are later recycable for a fair price.</p>
+        </div>
+        <p>&copy;2023, Bottles Boutique, Sample Street 5, 56578, Zürich </p>
+    </footer>
 </body>
 
 </html>

@@ -113,7 +113,7 @@ footer a {
 
 
 #grid-1 {
-    grid-template: 1fr / 25% 25% 25% 25% ;
+    grid-template-columns: 25% 25% 25% 25% ;
 }
 
 #grid-2 {
