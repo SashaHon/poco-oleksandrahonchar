@@ -1,0 +1,33 @@
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+h1::before {
+    content: "";
+    display: block;
+    background-color: #000000;
+    height: 10px;
+    width: 50px;
+}
+
+[href$=".pdf"]::after {
+    content: " (.pdf)";
+}
+
+/* [target$="_blank"]::after {
+    content: " (opens in a new window)";
+} */
+
+fieldset {
+    align-items: baseline;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 200px 1fr;
+}
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form styling</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Sample form</h1>
+    <p>Please enter your data in the form bellow.</p>
+    <form action="index.html" method="POST">
+        <fieldset>
+            <legend>Shipping address</legend>
+
+            <label for="fname">Fist Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="e.g Susanne" required>
+
+            <label for="msg">Message:</label>
+            <textarea id="msg" name="msg" rows="3"></textarea>
+
+            <label for="country">Country:</label>
+            <select name="country" id="country">
+                <option value="ch">Switzerland</option>
+                <option value="ua">Ukraine</option>
+            </select>
+
+            <input type="checkbox" id="terms" name="terms" value="terms accepted" required>
+            <label for="terms">I accept the terms and conditions</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Payment method:</legend>
+
+            <input type="radio" id="cc" name="payment_method" value="cc">
+            <label for="cc">Credit Card</label>
+
+            <input type="radio" id="twint" name="payment_method" value="twint">
+            <label for="twint">Twint</label>
+        </fieldset>
+        <a href="document.pdf" target="_blank">Read more</a>
+    </form>
+</body>
+
+</html>
