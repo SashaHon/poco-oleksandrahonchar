@@ -86,7 +86,7 @@ footer .divider {
     color: rgb(84, 86, 88);
 }
 
-.sticky_text {
+.fixed_text {
     bottom: 360px;
     font-size: 2rem;
     font-weight: 700;

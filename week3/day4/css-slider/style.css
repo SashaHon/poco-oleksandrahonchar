@@ -1,0 +1,81 @@
+html,
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+ul {
+    display: flex;
+    color: white;
+
+    margin: 0;
+    padding: 0;
+
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    
+}
+
+li {
+    height: 80vh;
+    flex: 1 0 100%;
+    font-size: 3em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: grey;
+
+    /* transform: translateX(-100%);
+    transition: translateX 2s ease-in-out; */
+    scroll-snap-align: start;
+}
+
+li:nth-child(2n) {
+    background-color: lightgrey;
+}
+
+nav {
+    text-align: center;
+}
+
+a {
+    color: black;
+    font-size: 2em;
+}
+
+a:hover {
+    color: blue;
+}
+/* 
+@supports(scroll-behavior: smooth) {
+    transform: none;
+    scroll-snap-align: start;
+} */
+
+/* @media (pointer:coarse) {
+    .which-pointer::after {
+        content: "Are you on a touchscreen device?";
+    }
+} */
+
+@media (pointer:fine) {
+    .which-pointer::after {
+        content: "Are you using a mouse or trackpad?";
+    }
+}
+
+@media (hover) {
+    .can_i_hover::after {
+        content: "You look like you can hover.";
+    }
+}
