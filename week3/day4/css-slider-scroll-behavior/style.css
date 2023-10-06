@@ -34,11 +34,13 @@ li {
     align-items: center;
 
     background-color: grey;
-
-    /* transform: translateX(-100%);
-    transition: translateX 2s ease-in-out; */
     scroll-snap-align: start;
 }
+
+li:nth-child(1) {
+    background-image: ('img/1.JPG');
+}
+
 
 li:nth-child(2n) {
     background-color: lightgrey;
@@ -55,27 +57,4 @@ a {
 
 a:hover {
     color: blue;
-}
-/* 
-@supports(scroll-behavior: smooth) {
-    transform: none;
-    scroll-snap-align: start;
-} */
-
-/* @media (pointer:coarse) {
-    .which-pointer::after {
-        content: "Are you on a touchscreen device?";
-    }
-} */
-
-@media (pointer:fine) {
-    .which-pointer::after {
-        content: "Are you using a mouse or trackpad?";
-    }
-}
-
-@media (hover) {
-    .can_i_hover::after {
-        content: "You look like you can hover.";
-    }
 }

@@ -1,0 +1,46 @@
+Bill calculator:
+1. INITIALIZE: 
+	Bill: 0
+	Tip: 0
+	Tip_calc: Bill * Tip / 100
+	Total_sum: 0
+	
+	Button "Calculate"
+	Button "Start Over"
+
+2. PROMPT:
+	
+	Step1: Set new value for the Bill: (input.value) - prompt user ("Your bill")
+	Step2: Set new value for the Tip: (input.value) - propt user ("How much Tip would you like to leave? (%)")
+ 	
+	IF Button "Calculate" is clicked
+	
+	Step3: Validate.
+			Validation process: 
+				Bill validation:
+				IF Bill is not a number, contains "e" inside, smaller than 1 or larger than 5000 then Bill is not a valid number.
+				IF Bill is decimal and the part after coma is bigger than 5 then round up the Bill to larger integer.
+				IF Bill is decimal and the part after coma is smaller than 5 then cut out the Ruppens from the Bill, so it becomes integer.
+			
+				Tip Validation:
+				IF Tip is not a number, is decimal, contains "e" inside, smaller than 1 or more than 300 then Tip is not a valid number.
+				
+				
+	
+		  IF Tip or Bill are not valid numbers, let user know and 
+		  PROCEED to Step1. 
+		  
+		  ///// # IF Tip is 0 then set Tip_calc = 0 and Bill is valid number PROCEED further.
+		  IF Bill and Tip are valid numbers PROCEED further.
+		  
+	Step4: 
+		 Calculate Total_sum is equal to Tip_calc + Bill
+		
+		
+3. DISPLAY:
+		Your Bill: (input.value) CHF
+		Your Tip: (Tip_calc) CHF
+		Your Total Sum: (Total_sum) CHF
+
+		Insert Button "Start Over" bellow.
+	
