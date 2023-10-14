@@ -11,33 +11,49 @@ class Colleague {
     this.linkedIn = linkedIn;
     this.imgUrl = imgUrl;
   }
-
   //methods: send an email
   //go to linkedIn
 
+  onMouseOver(e) {
+    if (e.target.matches("li")) {
+      console.log("yes");
+    }
+    // console.log(e.target.matches("li"));
+  }
+
+  onMouseLeave(e) {
+    console.log("left");
+  }
+
+  setEvents(item) {
+    item.addEventListener("mouseover", this.onMouseOver);
+    item.addEventListener("mouseleave", this.onMouseLeave);
+  }
+
   createLi() {
     const list = document.querySelector("ul");
-    const colleague = document.createElement("li");
-    colleague.classList.add("list_item");
-    colleague.style.backgroundImage = `url(${this.imgUrl})`;
+    const item = document.createElement("li");
+
+    item.classList.add("list_item");
+    item.style.backgroundImage = `url(${this.imgUrl})`;
 
     // const colleagueInfo = document.createElement("article");
     // // console.log(colleagueInfo);
     // colleagueInfo.innerText = `${this.fname} ${this.lname}`;
     // // colleagueInfo.classList.add("text-hidden");
     // colleague.append(colleagueInfo);
-    console.log(this.imgUrl);
-    list.append(colleague);
+    list.append(item);
+    this.setEvents(item);
   }
 
-  createCollegue() {
+  createCollegue(item) {
     this.createLi();
   }
 }
 
 colleaguesDB.forEach((obj, index) => {
   let { fname, lname, email, job, hobby, quote, linkedIn, imgUrl } = { ...obj };
-  let a = new Colleague(
+  let item = new Colleague(
     fname,
     lname,
     email,
@@ -47,7 +63,7 @@ colleaguesDB.forEach((obj, index) => {
     linkedIn,
     imgUrl
   );
-  a.createCollegue();
+  item.createCollegue(item);
 });
 
 // let list = document.querySelector("ul");
