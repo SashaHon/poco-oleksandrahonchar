@@ -1,0 +1,146 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Charlie Display",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Noto Sans",
+        Ubuntu,
+        "Droid Sans",
+        "Helvetica Neue",
+        sans-serif;
+}
+
+main {
+    padding: 2em 16vw 6em;
+    height: 100vh;
+    width: 100vw;
+}
+
+section {
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+article {
+    padding: 2em;
+    transition: all;
+    background-color: rgba(0,0, 0, 0.4);
+}
+
+article ul {
+    line-height: 1.5em;
+    color: white;
+}
+
+a {
+    color: rgb(138, 176, 237);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(201, 216, 242);
+}
+
+img {
+    object-fit: cover;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.black {
+    color: black;
+}
+
+.brown {
+    color: brown;
+}
+
+.d-none {
+    display: none;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.v-hidden {
+    visibility: hidden;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+} 
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1.5em;
+    margin-top: 2em;
+}
+
+.hw-100 {
+    height: 100%;
+    width: 100%;
+}
+
+img.scaled {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.fs-12em {
+    font-size: 1.2em;
+}
+
+.mb-05em {
+    margin-bottom: 0.5em;
+}
+
+.mb-1em {
+    margin-bottom: 1em;
+}
+
+.mb-2em {
+    margin-bottom: 1em;
+}
+
+.blur {
+    transition: 0.5s all;
+    -webkit-filter: blur(15px);
+    filter: blur(15px);
+    cursor: pointer;
+}
+
