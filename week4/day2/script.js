@@ -1,32 +1,32 @@
 "use strict";
 
-// function daysToGerman(day) {
-//   switch (day) {
-//     case "Monday":
-//       return "Montag";
-//       break;
-//     case "Tuesday":
-//       return "Dienstag";
-//       break;
-//     case "Wednesday":
-//       return "Mittwoch";
-//       break;
-//     case "Thursday":
-//       return "Donnerstag";
-//       break;
-//     case "Friday":
-//       return "Frietag";
-//       break;
-//     case "Saturday":
-//       return "Samstag";
-//       break;
-//     case "Sunday":
-//       return "Sonntag";
-//       break;
-//     default:
-//       return "Such day of the week is not found. Check if it's typed in English starting with a capital letter";
-//   }
-// }
+function daysToGerman(day) {
+  switch (day) {
+    case "Monday":
+      return "Montag";
+      break;
+    case "Tuesday":
+      return "Dienstag";
+      break;
+    case "Wednesday":
+      return "Mittwoch";
+      break;
+    case "Thursday":
+      return "Donnerstag";
+      break;
+    case "Friday":
+      return "Frietag";
+      break;
+    case "Saturday":
+      return "Samstag";
+      break;
+    case "Sunday":
+      return "Sonntag";
+      break;
+    default:
+      return "Such day of the week is not found. Check if it's typed in English starting with a capital letter";
+  }
+}
 
 // function oddOrEven() {
 //   let num = prompt("enter a number between 0 and 20", 0);
