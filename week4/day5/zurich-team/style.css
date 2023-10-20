@@ -1,3 +1,6 @@
+/* for accessibility purpose instead of visibility none use 
+any other classes which visially hide but for screen readers remain. e.g.: only for .screen-readers-only */
+
 html, body {
     margin: 0;
     padding: 0;
