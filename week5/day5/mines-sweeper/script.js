@@ -5,8 +5,11 @@ const CHEAT_REVEAL_ALL = false;
 const ROWS_COUNT = 10;
 const COLS_COUNT = 10;
 
-var defeat = false;
-var victory = false;
+const BOMBS_COUNT = 10;
+const BOMBS_LIST = [];
+
+let defeat = false;
+let victory = false;
 
 // Cell constructor
 function Cell() {
@@ -16,10 +19,11 @@ function Cell() {
 }
 
 // Initialize cells
-var cells = Array(ROWS_COUNT);
-for (var row = 0; row < ROWS_COUNT; row++) {
+let cells = Array(ROWS_COUNT);
+// console.log(cells);
+for (let row = 0; row < ROWS_COUNT; row++) {
   cells[row] = Array(COLS_COUNT);
-  for (var col = 0; col < COLS_COUNT; col++) {
+  for (let col = 0; col < COLS_COUNT; col++) {
     cells[row][col] = new Cell();
   }
 }
@@ -29,6 +33,30 @@ for (var row = 0; row < ROWS_COUNT; row++) {
 // cells[0][1].isBomb = true;
 // cells[5][4].isBomb = true;
 // cells[9][9].isBomb = true;
+
+function generateRandomNum() {
+  let row = Math.floor(Math.random() * 10);
+  let column = Math.floor(Math.random() * 10);
+  return [row, column];
+}
+
+function checkCellIsBomb(row, column) {
+  return cells[row][column].isBomb;
+}
+
+function addBombs(bombsCount) {
+  for (let i = 0; i < bombsCount; i++) {
+    let [row, column] = generateRandomNum(bombsCount);
+    if (!checkCellIsBomb(row, column)) {
+      cells[row][column].isBomb = true;
+      BOMBS_LIST.push([row, column]);
+    } else {
+      i--;
+    }
+  }
+}
+// console.log(cells[BOMBS_LIST[0][0]][BOMBS_LIST[0][1]])
+addBombs(BOMBS_COUNT);
 
 //
 // TODO: Task 2 - Comment out the code of task 1. Instead of adding bombs in fixed places, add 10 of them in random places.
@@ -51,7 +79,7 @@ function discoverCell(row, col) {
   // TODO: Task 6 - Discover neighbor cells recursively, as long as there are no adjacent bombs to the current cell.
   //
   //
-  // TODO: Task 8 - Implement defeat. If the player "discovers" a bomb (clicks on it without holding shift), set the variable defeat to true.
+  // TODO: Task 8 - Implement defeat. If the player "discovers" a bomb (clicks on it without holding shift), set the letiable defeat to true.
   //
 }
 
@@ -96,7 +124,7 @@ function getTotalCellsToClear() {
 function checkForVictory() {
   //
   // TODO: Task 10 - Implement victory. If the player has revealed as many cells as they must (every cell that isn't a
-  //                 bomb), set variable victory to true.
+  //                 bomb), set letiable victory to true.
   //
   return 0;
 }
@@ -115,21 +143,21 @@ function getMessage() {
 
 // "Render" the game. Update the content of the page to reflect any changes to the game state.
 function render() {
-  var playfield = document.getElementById("playfield");
-  var html = "";
-  for (var row = 0; row < ROWS_COUNT; row++) {
+  let playfield = document.getElementById("playfield");
+  let html = "";
+  for (let row = 0; row < ROWS_COUNT; row++) {
     html += '<div class="row">';
-    for (var col = 0; col < COLS_COUNT; col++) {
-      var cell = cells[row][col];
-      var cellText = "";
-      var cssClass = "";
-      var textColor = "";
+    for (let col = 0; col < COLS_COUNT; col++) {
+      let cell = cells[row][col];
+      let cellText = "";
+      let cssClass = "";
+      let textColor = "";
       if (cell.discovered || CHEAT_REVEAL_ALL || defeat) {
         cssClass = "discovered";
         if (cell.isBomb) {
           cellText = "💣";
         } else {
-          var adjBombs = countAdjacentBombs(row, col);
+          let adjBombs = countAdjacentBombs(row, col);
           if (adjBombs > 0) {
             cellText = adjBombs.toString();
             if (adjBombs == 1) {
@@ -155,7 +183,7 @@ function render() {
   playfield.innerHTML = html;
 
   // Defeat screen
-  var body = document.getElementsByTagName("body")[0];
+  let body = document.getElementsByTagName("body")[0];
   if (defeat) {
     body.classList.add("defeat");
   }
