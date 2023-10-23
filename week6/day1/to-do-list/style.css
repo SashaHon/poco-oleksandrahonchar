@@ -1,0 +1,72 @@
+html,
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+main {
+    height: 100vh;
+    font-family: Inter, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    width: 100vw;
+    padding-top: 4em;
+}
+
+form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 3em;
+    margin: 0 auto;
+    width: 33%;
+}
+
+ul {
+    padding: 0.5em 1em;
+    margin: 0;
+    list-style: none;
+    font-size: 0.5em;
+    width: 80%;
+
+}
+
+p {
+    font-size: 0.4em;
+    text-align: center;
+    color: rgb(142, 95, 134);
+}
+
+.form-radio {
+    font-size: 1em;
+}
+
+.form-radio input {
+    font-size: 10px;
+}
+
+.wrapper-client_input {
+    height: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    height: 3em;
+    width: 2em;
+    background-image: url('img/checklist.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 1em;
+}
+
+.mr-1em {
+    margin-right: 0.5em;
+}

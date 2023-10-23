@@ -1,12 +1,14 @@
 // Set this constant to true to debug the placement of bombs without
 // having to click on all cells to reveal them.
-const CHEAT_REVEAL_ALL = false;
+const CHEAT_REVEAL_ALL = true;
 
 const ROWS_COUNT = 10;
 const COLS_COUNT = 10;
 
 const BOMBS_COUNT = 10;
 const BOMBS_LIST = [];
+
+const playfield = document.querySelector("#playfield");
 
 let defeat = false;
 let victory = false;
@@ -28,12 +30,7 @@ for (let row = 0; row < ROWS_COUNT; row++) {
   }
 }
 
-//
 // TODO: Task 1 - add some bombs at fixed positions.
-// cells[0][1].isBomb = true;
-// cells[5][4].isBomb = true;
-// cells[9][9].isBomb = true;
-
 function generateRandomNum() {
   let row = Math.floor(Math.random() * 10);
   let column = Math.floor(Math.random() * 10);
@@ -56,7 +53,12 @@ function addBombs(bombsCount) {
   }
 }
 // console.log(cells[BOMBS_LIST[0][0]][BOMBS_LIST[0][1]])
+
 addBombs(BOMBS_COUNT);
+
+// console.log(BOMBS_LIST[0]);
+// console.log(BOMBS_LIST);
+// console.log(countAdjacentBombs(BOMBS_LIST));
 
 //
 // TODO: Task 2 - Comment out the code of task 1. Instead of adding bombs in fixed places, add 10 of them in random places.
@@ -70,6 +72,13 @@ render();
 //
 // Game functions definitions
 //
+
+function addEventListeners() {}
+
+function clickHandler(e) {
+  console.log(e.target);
+}
+playfield.addEventListener("click", clickHandler);
 
 function discoverCell(row, col) {
   //
@@ -92,13 +101,70 @@ function flagCell(row, col) {
 
 // This function is called once for each cell when rendering the game. The row and col of the current cell is
 // passed to the functionn
+
 function countAdjacentBombs(row, col) {
   //
   // TODO: Task 4 - Adjacent bombs are bombs in cells touching our cell (also diagonally). Implement this function
   //                so that it returns the count of adjacent cells with bombs in them.
   //
+  // console.log("here:", [row, col]);
   return 1;
 }
+
+function isZeroOrNine(num) {
+  if (num === 0) {
+    return 0;
+  } else if (num === 9) {
+    return 9;
+  }
+  return false;
+}
+
+function countAdjacentBombsAlt(row, col) {
+  let adjBombsCount = 0;
+
+  //function that checks if row or col == 0 || 9
+  for (let i = 0; i < 3; i++) {
+    // for (let j = 0; j < 3; j++){
+
+    // console.log("first", row, isZeroOrNine(row));
+    // console.log("second", row, !isZeroOrNine(row));
+
+    console.log("case:", [row, col]);
+
+    if (i === 0 && !isZeroOrNine(row)) {
+      if (!isZeroOrNine(col) && cells[row - 1][col - 1].isBomb) {
+        adjBombsCount += 1;
+      } else if (!isZeroOrNine(col) && cells[row - 1][col].isBomb) {
+        adjBombsCount += 1;
+      } else if (!isZeroOrNine(col) && cells[row - 1][col + 1].isBomb) {
+        adjBombsCount += 1;
+      } ////////PLEASE ALSO ADD CHECKUP IF ALL OF THE CELLS "BEFORE, AFTER ETC EXIST";
+    } else if (i === 1) {
+      if (!isZeroOrNine(col) && cells[row][col - 1].isBomb) {
+        adjBombsCount += 1;
+      } else if (!isZeroOrNine(col) && cells[row][col + 1].isBomb) {
+        adjBombsCount += 1;
+      }
+    } else if (i === 2 && !isZeroOrNine(row)) {
+      if (!isZeroOrNine(col) && cells[row + 1][col - 1].isBomb) {
+        adjBombsCount += 1;
+      } else if (!isZeroOrNine(col) && cells[row + 1][col].isBomb) {
+        adjBombsCount += 1;
+      } else if (!isZeroOrNine(col) && cells[row + 1][col + 1].isBomb) {
+        adjBombsCount += 1;
+      }
+    }
+
+    //[2][0] => [1][-1], [2][-1], [3][-1]
+    //  }
+  }
+  console.log(adjBombsCount);
+  console.log("here:", [row, col]);
+  return 1;
+}
+
+countAdjacentBombsAlt(...BOMBS_LIST[0]);
 
 function getBombsCount() {
   //

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <main>
+        <form class="form-radio"> Sort by
+            <div>
+                <input type="radio" id="by-date" name="sort" value=" date" checked>
+                <label for="by-date">date</label>
+            </div>
+            <div>
+                <input type="radio" id="by-alphabet" name="sort" value="alphabet">
+                <label for="by-alphabet">alphabet</label>
+            </div>
+        </form>
+        <form action="index.html" method="post" class="form-list">
+            <div class="icon"></div>
+            <label for="to-do-list">To do list</label>
+            <ul>
+            </ul>
+            <p>Got anything else to do? <br> List it here!</p>
+            <div class="wrapper-client_input">
+                <iconify-icon height="0.5em" icon="cil:pencil" class="mr-1em"></iconify-icon>
+                <input type="text" name="list-item" placeholder="enter your task" class="client_input">
+            </div>
+        </form>
+
+    </main>
+    <script type="module" src="script.js" defer></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</body>
+
+</html>
