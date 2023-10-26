@@ -16,3 +16,9 @@ async function kitchen() {
   console.log("D");
   console.log("E");
 }
+
+kitchen();
+
+console.log("doing the dishes");
+console.log("cleaning the tables");
+console.log("taking orders");
