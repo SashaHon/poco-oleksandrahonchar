@@ -69,3 +69,5 @@ function render(data) {
     ul.append(list_item);
   });
 }
+
+//next step - add to local storage; read about it here: https://blog.logrocket.com/localstorage-javascript-complete-guide/#:~:text=localStorage%20is%20a%20property%20that,browser%20or%20restarts%20the%20computer.
